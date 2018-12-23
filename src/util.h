@@ -3,3 +3,5 @@
 
 #define dwh(pin) digitalWrite(pin, HIGH);
 #define dwl(pin) digitalWrite(pin, LOW);
+
+#define aw analogWrite

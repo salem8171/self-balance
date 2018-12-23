@@ -10,12 +10,7 @@ void Motor::setup(int pin1, int pin2, int speedPin)
     pmo(pin2);
     pmo(speedPin);
 
-    speedChannel = motorNumber;
-    motorNumber++;
-
-    ledcSetup(speedChannel, freq, resolution);
-    ledcAttachPin(speedPin, speedChannel);
-    ledcWrite(speedChannel, 0);
+    aw(speedPin, 0);
 }
 
 void Motor::setSpeed(int speed)
@@ -24,12 +19,12 @@ void Motor::setSpeed(int speed)
     {  
         dwh(pin1);
         dwl(pin2);
-        ledcWrite(speedChannel, speed);
+    aw(speedPin, speed);
     }
     else 
     {
         dwl(pin1);
         dwh(pin2);
-        ledcWrite(speedChannel, -speed);
+        aw(speedPin, -speed);
     }
 }

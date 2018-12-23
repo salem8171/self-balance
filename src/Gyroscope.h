@@ -1,12 +1,12 @@
 #include <Arduino.h>
 #include "util.h"
 #include <Wire.h>
+#include <Adafruit_L3GD20_U.h>
 
 class Gyroscope
 {
   private:
-    const int MPU = 0x68; 
-    int16_t AcX,AcY,AcZ,Tmp,GyX,GyY,GyZ;
+    Adafruit_L3GD20_Unified gyro;
 
   public:
     void setup();
