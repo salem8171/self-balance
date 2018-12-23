@@ -9,6 +9,7 @@ class Motor
         int speedPin;
         
     public:
-        void setup(int pin1, int pin2, int speedPin);
+        Motor(int pin1, int pin2, int speedPin);
+        void setup();
         void setSpeed(int speed);
 };

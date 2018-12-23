@@ -5,15 +5,15 @@
 
 Gyroscope gyro;
 
-Motor leftMotor;
-Motor rightMotor;
+Motor leftMotor(right_motor_pin1, right_motor_pin2, right_motor_speed);
+Motor rightMotor(left_motor_pin1, left_motor_pin2, left_motor_speed);
 
 void setup() 
 {
   gyro.setup();
 
-  rightMotor.setup(right_motor_pin1, right_motor_pin2, right_motor_speed);
-  leftMotor.setup(left_motor_pin1, left_motor_pin2, left_motor_speed);
+  rightMotor.setup();
+  leftMotor.setup();
 }
 
 void loop() 
